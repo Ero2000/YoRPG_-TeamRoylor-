@@ -15,4 +15,13 @@ public class Monster extends Character{
 	return "Monster";
     }
 
+    public void specialize() {
+
+    }
+    public void normalize() {
+
+    }
+    public String about () {
+	return "Monster: Grr..";
+    }
 }

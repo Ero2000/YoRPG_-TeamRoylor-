@@ -70,7 +70,25 @@ public class YoRPG
 	}
 	catch ( IOException e ) { }
 
-	System.out.print ("\nChoose your class:\n" + pat.about() + "Selection: ");
+	s = "\nChoose your class:\n";
+	//	s += "\t(Type (Class #)_0 for description of the class)\n";
+	s += "\t1: Warrior:\n";
+	s += "\t2: Mage:\n";
+	s += "\t3: Rogue:\n";
+	s += "\t4: Archer:\n";
+	s += "\t5: Goblin:\n";
+	s += "\n Selection: \n";
+	System.out.print (s);
+
+	/*	try {
+	if (Integer.parseInt(in.readLine()) % 10 == 0) {
+	    int type = Integer.parseInt(in.readLine()) % 10;
+	    if (type >= 5) {}
+	    if (type == 1) {System.out.print (Warrior.about());}
+	
+	}
+	}
+	catch (IOException e) { }*/
 	
 	try {
 	    typeOfClass  = Integer.parseInt(in.readLine());
@@ -184,7 +202,7 @@ public class YoRPG
 	}
         
 
-	System.out.println( "Thy game doth be over." );
+	System.out.println( "Thy game doth be over.");
     }//end main
 
 }//end class YoRPG

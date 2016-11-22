@@ -16,4 +16,15 @@ public class Archer extends Character {
     public String toString() {
 	return "Archer";
     }
+    public void specialize() {
+	defense -= (int)(Math.random() * 10);
+	strength += (int)(Math.random() * 10);
+    }
+    public void normalize() {
+	defense = 35;
+	strength = 75;
+    }
+    public String about () {
+	return "Archer: Long ranged, uses a bow to shoot enemies from afar.";
+    }
 }

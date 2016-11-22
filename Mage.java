@@ -17,4 +17,16 @@ public class Mage extends Character {
     public String toString() {
 	return "Mage";
     }
+
+    public void specialize() {
+	defense -= (int)(Math.random() * 10);
+	strength += (int)(Math.random() * 10);
+    }
+    public void normalize() {
+	defense = 20;
+	strength = 50;
+    }
+    public String about () {
+	return "Mage: Uses magical attacks to smite enemies.";
+    }
 }

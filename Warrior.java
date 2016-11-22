@@ -17,5 +17,17 @@ public class Warrior extends Character{
 	return "Warrior";
     }
 
+    public void specialize() {
+	defense -= (int)(Math.random() * 10);
+	strength += (int)(Math.random() * 10);
+    }
+    public void normalize() {
+	defense = 40;
+	strength = 100;
+    }
+    public String about () {
+	return "Warrior: Tough and strong. A classic.";
+    }
+
     
 }
