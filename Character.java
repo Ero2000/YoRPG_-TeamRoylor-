@@ -1,4 +1,4 @@
-public class Character {
+public abstract class Character {
     protected int HP;
     protected int strength;
     protected int defense;
