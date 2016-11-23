@@ -18,4 +18,16 @@ public class Goblin extends Character {
 	return "Goblin";
     }
 
+    public void specialize() {
+	defense -= (int)(Math.random() * 10);
+	strength += (int)(Math.random() * 10);
+    }
+    public void normalize() {
+	defense = 10;
+	strength = 100;
+    }
+    public String about () {
+	return "Goblin: That guy.";
+    }
+
 }

@@ -21,17 +21,9 @@ public abstract class Character {
 	x.normalize();
 	return damage;
     }
-    public void specialize() {
-	defense -= 10;
-	strength += 10;
-    }
-    public void normalize() {
-	defense += 10;
-	strength -= 10;
-    }
-    public static String about () {
-	return "\t1: Warrior: A melee fighter, tough and strong.\n" + "\t2: Mage: Uses magic, though range isn't that long.\n" + "\t3: Rogue: Silent and swift, with quick hits.\n" + "\t4: Archer: Shoots from afar, faster than spit.\n" + "\t5: Goblin: With this fella, it's about to get lit.\n";	
-    }
+    public abstract void specialize();
+    public abstract void normalize();
+    public abstract String about ();
 
     public String getName() {
 	return name;
