@@ -21,6 +21,10 @@ public abstract class Character {
 	x.normalize();
 	return damage;
     }
+    public boolean miss() {
+	if (Math.random() > 0.3) {return true;}
+	else {return false;}
+    }
     public abstract void specialize();
     public abstract void normalize();
     public abstract String about ();

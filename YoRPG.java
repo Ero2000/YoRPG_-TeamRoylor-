@@ -56,6 +56,7 @@ public class YoRPG
     {
 	String s;
 	String name = "";
+	
 	s = "~~~ Welcome to Ye Olde RPG! ~~~\n";
 
 	s += "\nChoose your difficulty: \n";
@@ -70,14 +71,21 @@ public class YoRPG
 	}
 	catch ( IOException e ) { }
 
+	
+	System.out.print( "\nIntrepid explorer, what doth thy call thyself? (State your name): " );
+
+	try {
+	    name = in.readLine();
+	}
+	catch ( IOException e ) { }
+
 	s = "\nChoose your class:\n";
 	//	s += "\t(Type (Class #)_0 for description of the class)\n";
 	s += "\t1: Warrior:\n";
 	s += "\t2: Mage:\n";
 	s += "\t3: Rogue:\n";
 	s += "\t4: Archer:\n";
-	s += "\t5: Goblin:\n";
-	s += "\n Selection: \n";
+	s += "\t5: Goblin:\n";	    
 	System.out.print (s);
 
 	/*	try {
@@ -98,18 +106,8 @@ public class YoRPG
 	    else if (typeOfClass == 3) {pat = new Rogue ( name );}
 		else if (typeOfClass == 4) {pat = new Archer ( name );}
 		else {pat = new Goblin ( name );}
-
 	}
 	catch ( IOException e ) { }
-
-	s = "Intrepid " + pat.toString() + ", what doth thy call thyself? (State your name): ";
-	System.out.print( s );
-
-	try {
-	    name = in.readLine();
-	}
-	catch ( IOException e ) { }
-
     }//end newGame()
 
 
@@ -142,20 +140,28 @@ public class YoRPG
 		    i = Integer.parseInt( in.readLine() );
 		}
 		catch ( IOException e ) { }
-
-		if ( i == 2 )
-		    pat.specialize();
-		else
-		    pat.normalize();
-
+		if (pat.miss()) {
+		    if ( i == 2 ){
+			pat.specialize();}
+		    else{
+			pat.normalize();}
 		d1 = pat.attack( smaug );
-		d2 = smaug.attack( pat );
 
 		System.out.println( "\n" + pat.getName() + " dealt " + d1 +
 				    " points of damage.");
+		    }
+		else {System.out.println( "\nRats," + pat.getName() + " missed!");}
+		if (smaug.miss()) {
 
+		d2 = smaug.attack( pat );    
 		System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
-				    " for " + d2 + " points of damage.");
+				    " for " + d2 + " points of damage.");}
+		else {System.out.println( "Lucky! Ye Olde Monster missed its attack!");
+		}
+		
+	     
+
+					  
 	    }//end while
 
 	    //option 1: you & the monster perish
