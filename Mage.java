@@ -27,6 +27,6 @@ public class Mage extends Character {
 	strength = 50;
     }
     public String about () {
-	return "Mage: Uses magical attacks to smite enemies.";
+	return "Uses magical attacks to smite enemies.";
     }
 }

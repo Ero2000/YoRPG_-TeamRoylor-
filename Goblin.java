@@ -27,7 +27,7 @@ public class Goblin extends Character {
 	strength = 100;
     }
     public String about () {
-	return "Goblin: That guy.";
+	return "That guy.";
     }
 
 }

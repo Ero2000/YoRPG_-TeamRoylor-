@@ -80,12 +80,16 @@ public class YoRPG
 	catch ( IOException e ) { }
 
 	s = "\nChoose your class:\n";
-	//	s += "\t(Type (Class #)_0 for description of the class)\n";
-	s += "\t1: Warrior:\n";
-	s += "\t2: Mage:\n";
-	s += "\t3: Rogue:\n";
-	s += "\t4: Archer:\n";
-	s += "\t5: Goblin:\n";	    
+	pat = new Warrior();
+	s += "\t1: Warrior: " + pat.about() + "\n";
+	pat = new Mage();
+	s += "\t2: Mage: " + pat.about() + "\n";
+	pat = new Rogue();
+	s += "\t3: Rogue: " + pat.about() + "\n";
+	pat = new Archer();
+	s += "\t4: Archer: " + pat.about() + "\n";
+	pat = new Goblin();
+	s += "\t5: Goblin: " + pat.about() + "\n";	    
 	System.out.print (s);
 
 	/*	try {
@@ -174,7 +178,7 @@ public class YoRPG
 		System.out.println( "\n" + pat.getName() + " dealt " + d1 +
 				    " points of damage.");
 		    }
-		else {System.out.println( "\nRats," + pat.getName() + " missed!");}
+		else {System.out.println( "\nRats, " + pat.getName() + " missed!");}
 		if (smaug.miss()) {
 
 		d2 = smaug.attack( pat );    

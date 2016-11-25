@@ -26,7 +26,7 @@ public class Warrior extends Character{
 	strength = 100;
     }
     public String about () {
-	return "Warrior: Tough and strong. A classic.";
+	return "Tough and strong. A classic.";
     }
 
     

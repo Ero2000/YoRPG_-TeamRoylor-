@@ -27,7 +27,7 @@ public class Rogue extends Character {
 	strength = 150;
     }
     public String about () {
-	return "Rogue: Sneaky, uses quick attacks to assassinate.";
+	return "Sneaky, uses quick attacks to assassinate.";
     }
 
 }

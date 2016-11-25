@@ -25,6 +25,6 @@ public class Archer extends Character {
 	strength = 75;
     }
     public String about () {
-	return "Archer: Long ranged, uses a bow to shoot enemies from afar.";
+	return "Long ranged, uses a bow to shoot enemies from afar.";
     }
 }
