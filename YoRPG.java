@@ -77,7 +77,9 @@ public class YoRPG
 	try {
 	    name = in.readLine();
 	}
-	catch ( IOException e ) { }
+	catch ( IOException e ) {
+	    name = "The Unnamed One";
+	}
 
 	s = "\nChoose your class:\n";
 	pat = new Warrior();
@@ -92,16 +94,6 @@ public class YoRPG
 	s += "\t5: Goblin: " + pat.about() + "\n";	    
 	System.out.print (s);
 
-	/*	try {
-	if (Integer.parseInt(in.readLine()) % 10 == 0) {
-	    int type = Integer.parseInt(in.readLine()) % 10;
-	    if (type >= 5) {}
-	    if (type == 1) {System.out.print (Warrior.about());}
-	
-	}
-	}
-	catch (IOException e) { }*/
-	
 	try {
 	    typeOfClass  = Integer.parseInt(in.readLine());
 	    //instantiate the player's character
@@ -111,7 +103,7 @@ public class YoRPG
 		else if (typeOfClass == 4) {pat = new Archer ( name );}
 		else {pat = new Goblin ( name );}
 	}
-	catch ( IOException e ) { }
+	catch ( IOException e ) {System.out.print ("Please type the desired class's number.");}
     }//end newGame()
 
 
@@ -153,7 +145,7 @@ public class YoRPG
 	    }
 	   
 	    
-	    System.out.println( "\nLo, yonder " + smaug.getName() + " approacheth!" );
+	    System.out.println( "\nOh, yonder " + smaug.getName() + " approacheth!" );
 
 
 	    
